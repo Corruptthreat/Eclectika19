@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<title>Mega Events</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <!-- Bootstrap -->
+ <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <!-- styles -->
+ <link href="css/styles.css" rel="stylesheet">
+ <!--modalimage-->
+ <link rel="stylesheet" href="modalimage/modal.css">
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+ <!--<link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">-->
+ <link href="https://fonts.googleapis.com/css?family=Atma:400,500" rel="stylesheet">
+ <link href="use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <style>
+   .page-content{
+     height: 900px;
+   }
+  
+   .nav{
+     height: 140px;
+     width:150px;
+   }
+   .col-md-2{
+     max-height: 100em;
+   }
+    .nav-item {
+        margin-left: 50px;}
+
+        .nav-bar-toggler{
+   position: relative;
+   margin-left: 0;
+}
+.navbar{
+  font-family: 'Atma', cursive;
+  font-size: 20px;
+}
+.navbar-brand{
+  font-size: 20px;
+}
+.sidebar{
+  cursor: pointer;
+}
+.panel-body,.content-box-large{
+  font-family: 'Atma', cursive;
+  font-size: 15px;
+}
+.sidebar.content-box{
+  height: 220px;
+  width: 150px;
+  margin-left: 20%;
+}
+#picture {
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #picture:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 60%;
+    max-width: 450px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close1 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  #event_title{
+    font-family: 'Atma', cursive;
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+    
+  }
+  .deepak-title{
+    font-family: 'Atma', cursive;
+  }
+  .col-md-12{
+   width: 500px;
+}
+  
+  .close1:hover,
+  .close1:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .nav > li{
+    height: 30px;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+  @media (max-width:600px){
+     .page-content{
+       height: auto;
+     }
+     .box-with-header,.content-box-header{
+       width: 385px;
+     }
+     .nav{
+       height: 70px;
+       width: 380px;
+     }
+     .sidebar.content-box{
+       height: 80px;
+       width: 385px;
+       margin-left: 0;
+     }
+     .picture{
+       margin-left: 10%;
+     }
+     .picture img{
+       height: 300px;
+     }
+   }
+</style>
+ </head>
+<body>
+    <div class="full-body maindiv">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">Eclectika'19</a>
+          <div class="collapse navbar-collapse sticky-top" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+               <li class="nav-item">
+              <a class="nav-link" href="index1.html">Mega Events</a>
+            </li> <li class="nav-item">
+              <a class="nav-link" href="index2.html">Informal Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index3.html">Literary Events</a>
+              </li>
+             <li class="nav-item">
+              <a class="nav-link" href="index4.html">Cultural Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index5.html">Online Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index6.html">Photography</a>
+              </li>
+            
+            </ul>
+          </div>
+        </nav></div><br><br>
+          <div class="page-content">
+       
+<div class="container-fluid">
+    <br><br><br><div id="event_title" class="panel-title"></div>
+    <!-- <header style="height:80px;"></header> -->
+    <!-- Navbar -------------->
+              <div class="row">
+              <div class="col-md-2"><br>
+                <div class="sidebar content-box" style="display: block;">
+                        <ul class="nav">
+
+                  <li class="a" id="a0"><i class="glyphicon glyphicon-home" id="a0"></i>&nbsp;&nbsp;&nbsp;&nbsp;Allure</li>
+                  <li class="a" id="a1"><i class="glyphicon glyphicon-home" id="a1"></i>&nbsp;&nbsp;&nbsp;&nbsp;Avirbhaav</li>
+                  <li class="a" id="a2"><i class="glyphicon glyphicon-home" id="a2"></i>&nbsp;&nbsp;&nbsp;&nbsp;Clash of Choreos</li>
+                  <li class="a" id="a3"><i class="glyphicon glyphicon-home" id="a3"></i>&nbsp;&nbsp;&nbsp;&nbsp;Eclectika Idol</li>
+                  <li class="a" id="a4"><i class="glyphicon glyphicon-home" id="a4"></i>&nbsp;&nbsp;&nbsp;&nbsp;Goonj</li>
+                  <li class="a" id="a5"><i class="glyphicon glyphicon-home" id="a5"></i>&nbsp;&nbsp;&nbsp;&nbsp;Kalopsia</li>
+                  <li class="a" id="a6"><i class="glyphicon glyphicon-home" id="a6"></i>&nbsp;&nbsp;&nbsp;&nbsp;Tafree</li>
+                        </ul>
+                     
+                     </div>
+                     <div class="aniii"><img id="picture" class="picture" src="" alt="" style="width:100%;max-width:300px"></div>
+
+                     <!-- The Modal -->
+                     <div id="myModal" class="modal">
+                       <span class="close1" style="color:white;"><br>&times;</span>
+                       <br><br><img class="modal-content" id="img01">
+                       <div id="caption"></div>
+                       
+                     </div>
+              </div>
+<br>
+              <div class="col-md-10">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="content-box-large">
+                      <div class="panel-heading">
+                      <div class="deepak-title">Description & Rules</div>
+
+                    </div>
+                      <div class="panel-body">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="content-box-header">
+                          <div class="deepak-title">Judging Criteria</div>
+
+                        </div>
+                        <div class="content-box-large box-with-header" id="bb">
+
+                      </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="content-box-header">
+                          <div class="deepak-title">How to Register?</div>
+                        </div>
+                        <div class="content-box-large box-with-header" id="aa">
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>      
+      
+
+            <!-- <footer>
+              <div class="footer_plafond"></div>
+              <div class="container">
+                        <div class="row">
+                          <div class="col-sm-3"><img src="images/logo_cervooo_zombie-silhouette.svg">
+                          </div>
+                          <div class="col-sm-3">CERVOOO<br>
+                              Développeur spécialisée dans<br> la création de site internet,<br> extranet, et Intranet à Saint-Étienne,<br> Auvergne Rhône-Alpes</div>
+                          <div class="col-sm-3">
+                                 ABC
+                          </div>
+                          <div class="col-sm-3">
+                               ABC
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="text-left flex-item ml-4">
+                <a href="https://www.facebook.com/cervooo.agency">
+                    <i class="fab fa-facebook-square fa-3x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/franckhaegeli/">
+                    <i class="fab fa-linkedin fa-3x"></i>
+                </a>
+            </div>
+              <div class="footer_sol"></div>
+              <div class="col-12 text-center copyright">
+                  <a href="https://cabaroc.com/" target="_blank">Design by Cabaroc</a>
+              </div>
+          </footer> -->
+                 <!--modalimage-->
+                
+                 <script>
+                    $(document).ready(function(){
+                    $.getJSON('https://eclectika.org/api/news.php/GetEventByCategory?category=1', function(data) {
+                        var url = "https://scontent.fbho1-1.fna.fbcdn.net/v/t1.0-9/51528703_2130511840320519_907649026277507072_n.jpg?_nc_cat=104&_nc_ht=scontent.fbho1-1.fna&oh=4f4490463434e2873aa84a80d1373917&oe=5CFEF87C";
+                        var topic = ` ${data[0].Name}`
+                        var judging = ` ${data[0].Judging}`
+                        var register = ` ${data[0].Register}`
+                        var event = ` Description : ${data[0].Description} <br> <br>
+                                      Rules : ${data[0].Rules}`
+          
+          
+                        $(".aniii").html(  $('.picture').attr("src",url));
+                        $(".panel-title").html(topic);
+                        $("#bb").html(judging);
+                        $("#aa").html(register);
+                        $(".panel-body").html(event);
+                    });
+          
+                  });
+                  $(document).ready(function(){
+                      $("#a0").click(function(){
+                        $.getJSON('https://eclectika.org/api/news.php/GetEventByCategory?category=1', function(data) {
+                          var url = "https://scontent.fbho1-1.fna.fbcdn.net/v/t1.0-9/51528703_2130511840320519_907649026277507072_n.jpg?_nc_cat=104&_nc_ht=scontent.fbho1-1.fna&oh=4f4490463434e2873aa84a80d1373917&oe=5CFEF87C";
+          
+                            var topic = ` ${data[0].Name}`
+                            var judging = ` ${data[0].Judging}`
+                            var register = ` ${data[0].Register}`
+                            var event = ` Description : ${data[0].Description} <br> <br>
+                                          Rules : ${data[0].Rules}`
+          
+                                          $(".aniii").html(  $('.picture').attr("src",url));
+                            $(".panel-title").html(topic);
+                            $("#bb").html(judging);
+                            $("#aa").html(register);
+                            $(".panel-body").html(event);
+                        });
+          
+                  });
+                  });
+          
+                    $(document).ready(function(){
+                        $("#a1").click(function(){
+                          $.getJSON('https://eclectika.org/api/news.php/GetEventByCategory?category=1', function(data) {
+                            var url = "https://scontent.fbho1-1.fna.fbcdn.net/v/t1.0-9/51199763_2127633330608370_8086315419884847104_n.jpg?_nc_cat=108&_nc_ht=scontent.fbho1-1.fna&oh=33c7781e23a04a2bc697a1b8cca706cb&oe=5CB2B601";
+          
+                              var topic = ` ${data[1].Name}`
+                              var judging = ` ${data[1].Judging}`
+                              var register = ` ${data[1].Register}`
+                              var event = ` Description : ${data[1].Description} <br> <br>
+                                            Rules : ${data[1].Rules}`
+          
+                              $(".aniii").html(  $('.picture').attr("src",url));
+                              $(".panel-title").html(topic);
+                              $("#bb").html(judging);
+                              $("#aa").html(register);
+                              $(".panel-body").html(event);
+                          });
+          
+                    });
+                    });
+          
+                    $(document).ready(function(){
+                        $("#a2").click(function(){
+                          $.getJSON('https://eclectika.org/api/news.php/GetEventByCategory?category=1', function(data) {
+                            var url = "https://scontent.fbho1-1.fna.fbcdn.net/v/t1.0-9/51190427_2124651194239917_6399795596558860288_n.jpg?_nc_cat=108&_nc_ht=scontent.fbho1-1.fna&oh=72d866d014f978c998d10a121cb20a08&oe=5CF66452";
+          
+                              var topic = ` ${data[2].Name}`
+                              var judging = ` ${data[2].Judging}`
+                              var register = ` ${data[2].Register}`
+                              var event = ` Description : ${data[2].Description} <br> <br>
+                                            Rules : ${data[2].Rules}`
+          
+                              $(".aniii").html(  $('.picture').attr("src",url));
+                              $(".panel-title").html(topic);
+                              $("#bb").html(judging);
+                              $("#aa").html(register);
+                              $(".panel-body").html(event);
+                          });
+                        ;
+                    });
+                    });
+          
+                    $(document).ready(function(){
+                        $("#a3").click(function(){
+                          $.getJSON('https://eclectika.org/api/news.php/GetEventByCategory?category=1', function(data) {
+                            var url = "https://scontent.fbho1-1.fna.fbcdn.net/v/t1.0-9/51924565_2129129687125401_5302212013961773056_n.jpg?_nc_cat=100&_nc_ht=scontent.fbho1-1.fna&oh=c4bd61c42f2879ed0a03e67c1c205ecb&oe=5CE23585";
+          
+                              var topic = ` ${data[3].Name}`
+                              var judging = ` ${data[3].Judging}`
+                              var register = ` ${data[3].Register}`
+                              var event = ` Description : ${data[3].Description} <br> <br>
+                                            Rules : ${data[3].Rules}`
+                                            $(".aniii").html(  $('.picture').attr("src",url));
+          
+                              $(".panel-title").html(topic);
+                              $("#bb").html(judging);
+                              $("#aa").html(register);
+                              $(".panel-body").html(event);
+                          });
+                        ;
+                    });
+                    });
+          
+                    $(document).ready(function(){
+                        $("#a4").click(function(){
+                          $.getJSON('https://eclectika.org/api/news.php/GetEventByCategory?category=1', function(data) {
+                            var url = "https://scontent.fbho1-1.fna.fbcdn.net/v/t1.0-9/51091443_2126136707424699_1093876583439007744_n.jpg?_nc_cat=101&_nc_ht=scontent.fbho1-1.fna&oh=5ac3285d7ae509204dc71cd6fefdce3d&oe=5CEFA953";
+          
+                              var topic = ` ${data[4].Name}`
+                              var judging = ` ${data[4].Judging}`
+                              var register = ` ${data[4].Register}`
+                              var event = ` Description : ${data[4].Description} <br> <br>
+                                            Rules : ${data[4].Rules}`
+                                            $(".aniii").html(  $('.picture').attr("src",url));
+          
+                              $(".panel-title").html(topic);
+                              $("#bb").html(judging);
+                              $("#aa").html(register);
+                              $(".panel-body").html(event);
+                          });
+                        ;
+                    });
+                    });
+                    $(document).ready(function(){
+                        $("#a5").click(function(){
+                          $.getJSON('https://eclectika.org/api/news.php/GetEventByCategory?category=1', function(data) {
+                            var url = "https://scontent.fbho1-1.fna.fbcdn.net/v/t1.0-9/51417484_2132156700156033_1826235148119572480_n.jpg?_nc_cat=110&_nc_ht=scontent.fbho1-1.fna&oh=14d91f800efad46e49ab3cb5b5bc226c&oe=5CED235B";
+          
+                              var topic = ` ${data[5].Name}`
+                              var judging = ` ${data[5].Judging}`
+                              var register = ` ${data[5].Register}`
+                              var event = ` Description : ${data[5].Description} <br> <br>
+                                            Rules : ${data[5].Rules}`
+                                            $(".aniii").html(  $('.picture').attr("src",url));
+          
+                              $(".panel-title").html(topic);
+                              $("#bb").html(judging);
+                              $("#aa").html(register);
+                              $(".panel-body").html(event);
+                          });
+                        ;
+                    });
+                    });
+                    $(document).ready(function(){
+                        $("#a6").click(function(){
+                          $.getJSON('https://eclectika.org/api/news.php/GetEventByCategory?category=1', function(data) {
+                            var url = "https://scontent.fbho1-1.fna.fbcdn.net/v/t1.0-9/51949671_2135178539853849_4372191997688020992_n.jpg?_nc_cat=105&_nc_ht=scontent.fbho1-1.fna&oh=592fec81f0b60d33ce740d17fd470289&oe=5CF0909F";
+          
+                              var topic = ` ${data[6].Name}`
+                              var judging = ` ${data[6].Judging}`
+                              var register = ` ${data[6].Register}`
+                              var event = ` Description : ${data[6].Description} <br> <br>
+                                            Rules : ${data[6].Rules}`
+                                            $(".aniii").html(  $('.picture').attr("src",url));
+          
+                              $(".panel-title").html(topic);
+                              $("#bb").html(judging);
+                              $("#aa").html(register);
+                              $(".panel-body").html(event);
+                          });
+                        ;
+                    });
+                    });
+                    </script>
+         <script>
+           // Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('picture');
+var modalImg = document.getElementById("img01");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close1")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+         </script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

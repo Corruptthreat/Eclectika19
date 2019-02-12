@@ -1,0 +1,6 @@
+[08-Feb-2019 14:56:56 America/New_York] PHP Warning:  fopen(/messages/ravirahul554@gmail.com.txt): failed to open stream: No such file or directory in /home/eclectika/public_html/Mainsitetest/Eclectika19 final/contact.php on line 6
+[08-Feb-2019 14:56:56 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/eclectika/public_html/Mainsitetest/Eclectika19 final/contact.php on line 7
+[08-Feb-2019 14:58:21 America/New_York] PHP Warning:  fopen(/messages/rsahu3525@gmsail.com.txt): failed to open stream: No such file or directory in /home/eclectika/public_html/Mainsitetest/Eclectika19 final/contact.php on line 6
+[08-Feb-2019 14:58:21 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/eclectika/public_html/Mainsitetest/Eclectika19 final/contact.php on line 7
+[08-Feb-2019 15:03:51 America/New_York] PHP Warning:  fopen(/messages/mail@mail.txt): failed to open stream: No such file or directory in /home/eclectika/public_html/Mainsitetest/Eclectika19 final/contact.php on line 6
+[08-Feb-2019 15:03:51 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/eclectika/public_html/Mainsitetest/Eclectika19 final/contact.php on line 7
